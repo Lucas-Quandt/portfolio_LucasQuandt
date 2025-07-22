@@ -1,0 +1,367 @@
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  min-height: 100vh;       /* Garante que o body ocupe a altura total da viewport */
+  margin: 0;               /* Remove margens padrão do navegador */
+  background-color: #f0f0f0; /* Um cinza claro para o fundo da PÁGINA, para que o quadro branco se destaque */
+  font-family: Arial, sans-serif; /* Fonte para todo o corpo, se quiser */
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  
+}
+
+/*============================Cabeçalho============================*/
+
+header {
+  background-color: #7dd88242; /* fundo cinza claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%; /* Garante que o cabeçalho ocupe 100% da largura disponível */
+  box-sizing: border-box;
+}
+
+/*============================Foto Perfil============================*/
+.foto-perfil {
+  width: 250px; /* Tamanho da sua foto */
+  height: 250px; /* Garante que seja um círculo se border-radius for 50% */
+  border-radius: 50%; /* Transforma a foto em um círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border: 3px solid #7dd881; /* Borda circular na cor do seu destaque */
+  
+}
+
+
+.Titulo {
+  background-color: #00000036; /* azul Bootstrap */
+  color: rgb(255, 255, 255);
+  padding: 4rem 2rem;
+  border-radius: 0;
+   text-shadow:
+        -1px -1px 0 #ffffff,
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,
+         1px  1px 0 #ffffff;
+}
+
+.Titulo h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  /* Adiciona um contorno preto de 1 pixel */
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.Titulo p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+   
+}
+
+@media (max-width: 576px) {
+  .Titulo h1 {
+    font-size: 2.2rem;
+  }
+ }
+
+footer {
+      background-color: rgba(0, 0, 0, 0.3); /* Fundo preto com transparência */
+      text-align: center; /* Centraliza o texto */
+      padding: 0.1rem; /* Espaçamento interno */
+      flex-shrink: 0;
+      margin-top: 10rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      width: 100%; /* Garante que o cabeçalho ocupe 100% da largura disponível */
+      box-sizing: border-box;
+      color: #f0f0f0;
+      
+
+   }
+
+.Servicos {
+   text-align: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+   text-shadow:
+        -1px -1px 0 #ffffff,
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,
+         1px  1px 0 #ffffff;
+}
+
+.secoes-container {
+    display: grid; /* Define como um container de grid */
+    /* *** MUDANÇA AQUI: Para garantir EXATAMENTE 2 colunas *** */
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas com larguras iguais */
+    gap: 25px; /* Espaço entre as colunas e linhas */
+    max-width: 800px; /* Reduza o max-width para forçar as 2 colunas mais cedo */
+    margin: 0 auto; /* Isso vai CENTRALIZAR O CONTAINER NA PÁGINA */
+    padding: 0 20px; /* Adiciona um padding interno para não colar nas bordas em telas menores */
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.secao-item {
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.932); /* Sombra suave */
+    flex: 1; /* Permite que os itens cresçam e diminuam */
+    min-width: 280px; /* Largura mínima para cada item */
+    max-width: 350px; /* Largura máxima para cada item */
+    display: flex; /* Para organizar o conteúdo interno (imagem, texto) */
+    flex-direction: column; /* Conteúdo empilhado verticalmente */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    padding: 25px;
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: #333; /* Cor do texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.secao-item:hover {
+    transform: translateY(-8px); /* Move levemente para cima ao passar o mouse */
+    box-shadow: 0 8px 25px #7dd881; /* Aumenta a sombra */
+}
+
+/* Estilo das imagens dentro de cada retângulo */
+.secao-item img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: 180px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Recorta a imagem para cobrir o espaço sem distorcer */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
+}
+
+/* Estilo do título dentro do retângulo */
+.secao-item h3 {
+    font-size: 1.6em;
+    color: #7dd881; /* Cor destacada para o título */
+    margin-bottom: 10px;
+    /* Adiciona um contorno preto de 1 pixel */
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* Estilo do parágrafo dentro do retângulo */
+.secao-item p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
+    
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .secoes-container {
+        flex-direction: column; /* Empilha as seções verticalmente em telas pequenas */
+        align-items: center; /* Centraliza os itens empilhados */
+    }
+
+    .secao-item {
+        max-width: 90%; /* Ajusta a largura para ocupar mais espaço em telas pequenas */
+    }
+}
+
+/*tornar seu site responsivo*/
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .secao-item {
+        padding: 20px;
+    }
+    .secao-item h3 {
+        font-size: 1.4em;
+    }
+    .secao-item p {
+        font-size: 0.9em;
+    }
+}
+
+/*---------------PAGINA CRIAÇÃO E MANUTENÇÃO DE SITES ------------------*/
+
+    .Texto1 {
+     margin-bottom: 7rem; /* Espaço entre parágrafos */
+     line-height: 1.6; /* Altura das linhas para melhor leitura */
+     background-color: #ffffff; /* Um cinza claro para o fundo, para que o quadro branco se destaque */
+     font-family: Arial, sans-serif; /* Uma fonte limpa para o texto */
+     margin: 0; /* Remove margens padrão do navegador */
+     flex-direction: column;
+     
+
+       /* --- Centralização com Flexbox --- */
+     display: flex;
+     justify-content: center; /* Centraliza horizontalmente */
+     align-items: center;     /* Centraliza verticalmente */
+     min-height: 20vh;  
+     background-color: rgb(255, 255, 255); /* Fundo branco para o quadro */
+
+     /* --- Limita o tamanho para não pegar a página toda --- */
+     width: 90%; /* Ocupa 90% da largura da tela em dispositivos pequenos */
+     max-width: 1000px; /* Largura máxima de 800px em telas grandes */
+
+  /* --- Efeitos visuais e espaçamento --- */
+     padding: 2rem; /* Espaçamento interno para o texto não colar nas bordas */
+     border-radius: 10px; /* Bordas levemente arredondadas */
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar o efeito de "cartão" */
+     text-align: justify;
+
+     line-height: 1.6; /* Aumenta o espaçamento entre as linhas para facilitar a leitura */
+     color: #333;
+    }
+
+    .FotoSite img {
+     width: 1000px; /* Define a largura da foto */
+     height: 300px; /* Define a altura da foto */
+     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+     border: 5px solid #6293fd83; /* Adiciona uma borda sutil ao redor da foto (opcional) */
+     border-radius: 5%;
+    }
+
+    .FotoLogos img {
+     width: 300px; /* Define a largura da foto */
+     height: 110px; /* Define a altura da foto */
+    }
+
+    .BotaoVoltar {
+     margin-top: 40px;
+     margin-bottom: 30px;
+     display: inline-block;
+    background-color: #ccec11c4;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    
+    }
+    .Subtitulo1 h2 {
+    color: black; /* Define a cor do texto como preto */
+    text-shadow:
+        -1px -1px 0 white,  /* Sombra superior esquerda */
+         1px -1px 0 white,  /* Sombra superior direita */
+        -1px  1px 0 white,  /* Sombra inferior esquerda */
+         1px  1px 0 white; /* Sombra inferior direita */
+}
+
+
+    
+
+    /*---------------PAGINA CRIAÇÃO GAMES ------------------*/
+
+    .FotoGame img {
+     width: 1000px; /* Define a largura da foto */
+     height: 300px; /* Define a altura da foto */
+     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+     border: 5px solid #6293fd83; /* Adiciona uma borda sutil ao redor da foto (opcional) */
+     border-radius: 5%;
+    }
+
+    .galeria {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slides img {
+  display: none;        /* Esconde todas as imagens por padrão */
+  width: 100%;
+  border-radius: 8px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Exibir a imagem certa quando o input correspondente estiver checked */
+#foto1:checked ~ .slides .img1 {
+  display: block;
+}
+
+#foto2:checked ~ .slides .img2 {
+  display: block;
+}
+
+#foto3:checked ~ .slides .img3 {
+  display: block;
+}
+
+.botoes {
+  margin-top: 10px;
+}
+
+.botoes label {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.FotoLogos2 img {
+  width: 200px; /* Define a largura da foto */
+  height: 70px; /* Define a altura da foto */
+}
+
+ .BotaoBaixar {
+     margin-top: 40px;
+     margin-bottom: 30px;
+     display: inline-block;
+    background-color: #ff5f03fd;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    
+    }
+
+
+    /*---------------PAGINA CRIAÇÃO ANIMAÇÃO 3D----*/
+
+.FotoAnimacao img {
+  width: 1000px; /* Define a largura da foto */
+  height: 300px; /* Define a altura da foto */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border: 5px solid #6293fd83; /* Adiciona uma borda sutil ao redor da foto (opcional) */
+  border-radius: 5%;
+}
+
+.FotoLogos3 img {
+  width: 200px; /* Define a largura da foto */
+  height: 70px; /* Define a altura da foto */
+}
+
+.FotoVideo img {
+  width: 700px; /* Define a largura da foto */
+  height: 400px; /* Define a altura da foto */
+  border-radius: 20px;
+
+}
+
+
+
+
+
+
+       
+
+
+
